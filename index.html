@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-around;
+        }
+        table{
+            height: 40px;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset style="width: 40%;">
+        <legend>
+            <h3>
+                Form data
+            </h3>
+        </legend>
+        <form action="">
+            <h3>Name</h3>
+            <input type="text" placeholder="Enter yout name" id="txtname">
+            <h3>Father Name</h3>
+            <input type="text" placeholder="Enter yout Father name" id="txtfname">
+            <h3>Student Id</h3>
+            <input type="text" placeholder="Enter yout Rollno" id="txtid">
+            <fieldset>
+                <legend>
+                    <h3>Subjects</h3>
+                </legend>
+                <h3>Maths</h3>
+                <input type="number" placeholder="Enter your amths marks" id="txtmths" required>
+                <h3>Physics</h3>
+                <input type="number" placeholder="Enter your physics marks" id="txtphy">
+                <h3>Maths</h3>
+                <input type="number" placeholder="Enter your urdu marks" id="txturdu">
+
+                <br><br>
+                <input type="button" onclick="showdata()" value="Save Data">
+            </fieldset>
+        </form>
+    </fieldset>
+
+    <table border="2px">
+        <tr>
+            <th>Name</th>
+            <th>Father Name</th>
+            <th>Student Id</th>
+            <th>Maths</th>
+            <th>Phyiscs</th>
+            <th>Urdu</th>
+        </tr>
+        <tr>
+            <td id="nname"></td>
+            <td id="nfname"></td>
+            <td id="nid"></td>
+            <td id="nmths"></td>
+            <td id="nphy"></td>
+            <td id="nurdu"></td>
+        </tr>
+
+    </table>
+</body>
+
+<script>
+
+
+    function showdata(){
+        var name = document.getElementById("txtname");
+        var fname = document.getElementById("txtfname");
+        var id = document.getElementById("txtid");
+        var mths = document.getElementById("txtmths");
+        var phy = document.getElementById("txtphy");
+        var urdu = document.getElementById("txturdu");
+        
+        var nname = document.getElementById("nname");
+        var nfname = document.getElementById("nfname");
+        var nid = document.getElementById("nid");
+        var nmths = document.getElementById("nmths");
+        var nphy = document.getElementById("nphy");
+        var nurdu = document.getElementById("nurdu");
+    
+        nname.innerHTML = name.value;
+        nfname.innerHTML = fname.value;
+        nid.innerHTML = id.value;
+        nmths.innerHTML = mths.value;
+        nphy.innerHTML = phy.value;
+        nurdu.innerHTML = urdu.value;
+    
+    
+    }
+    
+    </script>
+</html>
+
